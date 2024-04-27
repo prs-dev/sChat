@@ -7,7 +7,8 @@ const authRoutes = require('./routes/authRoutes')
 const messageRoutes = require('./routes/messageRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-const app = express()
+const {app, server} = require("./socket/socket")
+
 const PORT = process.env.PORT || 5000
 
 app.use(express.json())
@@ -17,7 +18,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/message', messageRoutes)
 app.use('/api/user', userRoutes)
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     connectDB()
     console.log("server is running...")
 })
