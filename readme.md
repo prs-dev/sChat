@@ -15,3 +15,4 @@ can be started in development mode using (in root) `npm run client`
 - socket.io
 can be started in development mode using (in root) `npm run dev`
 
+Deployed version check here: <https://schat-sswv.onrender.com>
